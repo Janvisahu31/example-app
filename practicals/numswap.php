@@ -1,19 +1,21 @@
 <?php
-// Initialize two numbers
+// This is a PHP program that swaps the values of two numbers.
+
+// Define two variables to hold the numbers.
 $number1 = 10;
 $number2 = 20;
 
-echo "Before swapping: \n";
-echo "Number 1: " . $number1 . "\n";
-echo "Number 2: " . $number2 . "\n";
+// Print the original values.
+echo "Original Values: ";
+echo "Number 1: " . $number1 . ", Number 2: " . $number2 . "<br>";
 
-// Swap the numbers using a temporary variable
+// Swap the values of the two numbers using a temporary variable.
 $temp = $number1;
 $number1 = $number2;
 $number2 = $temp;
 
-echo "After swapping: \n";
-echo "Number 1: " . $number1 . "\n";
-echo "Number 2: " . $number2 . "\n";
+// Print the swapped values.
+echo "Swapped Values: ";
+echo "Number 1: " . $number1 . ", Number 2: " . $number2 . "<br>";
 ?>
 
