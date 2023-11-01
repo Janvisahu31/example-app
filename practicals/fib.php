@@ -1,22 +1,23 @@
 <?php
-function generateFibonacci($n) {
-    $fibonacci = [];
-    $fibonacci[0] = 0;
-    $fibonacci[1] = 1;
+// This is a PHP program that generates the Fibonacci sequence.
 
-    for ($i = 2; $i < $n; $i++) {
-        $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
-    }
+// Define the number of terms you want in the Fibonacci sequence.
+$terms = 10;
 
-    return $fibonacci;
+// Initialize the first two terms of the sequence.
+$firstTerm = 0;
+$secondTerm = 1;
+
+// Print the initial terms of the sequence.
+echo "Fibonacci Sequence ($terms terms): ";
+echo $firstTerm . ", " . $secondTerm;
+
+// Generate and print the rest of the sequence.
+for ($i = 2; $i < $terms; $i++) {
+    $nextTerm = $firstTerm + $secondTerm;
+    echo ", " . $nextTerm;
+    $firstTerm = $secondTerm;
+    $secondTerm = $nextTerm;
 }
-
-$n = 10; // Change this to the number of Fibonacci numbers you want
-$fibonacciNumbers = generateFibonacci($n);
-
-foreach ($fibonacciNumbers as $number) {
-    echo $number . " ";
-}
-
 ?>
 
