@@ -1,20 +1,21 @@
 <?php
-function factorial($n) {
-    if ($n < 0) {
-        return "Factorial is not defined for negative numbers.";
-    } elseif ($n == 0) {
-        return 1; // The factorial of 0 is defined as 1.
-    } else {
-        $result = 1;
-        for ($i = 1; $i <= $n; $i++) {
-            $result *= $i;
-        }
-        return $result;
-    }
+// This is a PHP program that calculates the factorial of a number.
+
+// Define the number for which you want to calculate the factorial.
+$number = 5;
+
+// Initialize the factorial to 1.
+$factorial = 1;
+
+// Print the number for which the factorial is being calculated.
+echo "Factorial of $number: ";
+
+// Calculate the factorial of the number.
+for ($i = 1; $i <= $number; $i++) {
+    $factorial *= $i;
 }
 
-$number = 5; // Change this to the number for which you want to calculate the factorial.
-$factorial = factorial($number);
-echo "The factorial of $number is: $factorial";
+// Print the result.
+echo $factorial;
 ?>
 
