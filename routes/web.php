@@ -52,5 +52,9 @@ Route::get('/songs', function () {
     return view('songs', [ 'songs' => Song::all() ] );
 });
 
+Route::get('/playlists/{playlistId}', function (string $playlistId) {
+    return view('playlists', ['songs'=> Song::all(),'playlistId'=> $playlistId]);
+});
+
 
 ?>
